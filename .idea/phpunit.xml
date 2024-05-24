@@ -4,6 +4,7 @@
     <option name="directories">
       <list>
         <option value="$PROJECT_DIR$/hikerz/tests" />
+        <option value="$PROJECT_DIR$/hiking-project/tests" />
       </list>
     </option>
   </component>
