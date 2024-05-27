@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,15 +6,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hike Details</title>
 </head>
 <body>
 @include('includes.header')
-<h1>Hikes : </h1>
-<ul>
-    @foreach($hikes as $hike)
-        <li><a href=" {{ url('/hikes/' . $hike-> hike_id) }}">{{ $hike->name }}</a></li>
-    @endforeach
-</ul>
+<h1>{{ $hike->name }}</h1>
+<p>Distance: {{ $hike->distance }}</p>
+<p>Duration: {{ $hike->duration }}</p>
+<p>Elevation Gain: {{ $hike->elevation_gain }}</p>
+<p>Description: {{ $hike->description }}</p>
 </body>
 </html>
+

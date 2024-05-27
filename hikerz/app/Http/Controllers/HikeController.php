@@ -40,4 +40,15 @@ class HikeController extends Controller
         // Return the hikes to the view
         return view('hikes', ['hikes' => $hikes]);
     }
+    public function showHike($hike_id)
+    {
+        // Fetch the hike with the given ID from the database
+        $hike = Hike::where('hike_id', $hike_id)->first();
+
+        // Return the hike to the view
+        return view('hike', ['hike' => $hike]);
+    }
+
 }
+
+
