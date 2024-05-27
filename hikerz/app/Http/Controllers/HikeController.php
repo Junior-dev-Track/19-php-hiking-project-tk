@@ -29,7 +29,7 @@ class HikeController extends Controller
         $hike->save();
 
         // Redirect the user back to the form
-        return redirect('/')->with('success', 'Hike added successfully');
+        return redirect('/hikes')->with('success', 'Hike added successfully');
     }
 
     public function showHikes()
