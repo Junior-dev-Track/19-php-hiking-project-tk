@@ -10,5 +10,10 @@
 <body>
 @include('includes.header')
 <h1>Hikes : </h1>
+<ul>
+    @foreach($hikes as $hike)
+        <li>{{ $hike->name }}</li>
+    @endforeach
+</ul>
 </body>
 </html>

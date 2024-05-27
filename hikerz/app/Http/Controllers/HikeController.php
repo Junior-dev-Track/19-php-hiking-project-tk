@@ -31,4 +31,13 @@ class HikeController extends Controller
         // Redirect the user back to the form
         return redirect('/')->with('success', 'Hike added successfully');
     }
+
+    public function showHikes()
+    {
+        // Fetch all hikes from the database
+        $hikes = Hike::all();
+
+        // Return the hikes to the view
+        return view('hikes', ['hikes' => $hikes]);
+    }
 }
