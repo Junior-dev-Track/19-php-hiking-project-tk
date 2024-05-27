@@ -23,7 +23,7 @@
             </ul>
             <div class="log">
                 <a href="#">Login</a>
-                <a href="#">Subscribe</a>
+                <a href="/subscribe">Subscribe</a>
             </div>
         </nav>
     </header>

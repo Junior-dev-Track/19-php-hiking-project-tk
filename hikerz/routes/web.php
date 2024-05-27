@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'App\Http\Controllers\HikeController@showHikes');
+
 Route::get('/contact', function () {
     return view('Contact');
 });
@@ -19,5 +20,8 @@ Route::post('/hikes/add', 'App\Http\Controllers\HikeController@addHike');
 Route::get('/hikes', 'App\Http\Controllers\HikeController@showHikes');
 
 Route::get('/hikes/{id}', 'App\Http\Controllers\HikeController@showHike');
+
+Route::get('/subscribe', 'App\Http\Controllers\UserController@showSubscriptionForm');
+Route::post('/subscribe', 'App\Http\Controllers\UserController@subscribe');
 
 
