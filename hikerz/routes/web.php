@@ -19,8 +19,6 @@ Route::get('/hikes/add', function () {
 
 Route::post('/hikes/add', 'App\Http\Controllers\HikeController@addHike');
 
-Route::get('/hikes', function () {
-    return view('hikes');
-});
+Route::get('/hikes', 'App\Http\Controllers\HikeController@showHikes');
 
 
