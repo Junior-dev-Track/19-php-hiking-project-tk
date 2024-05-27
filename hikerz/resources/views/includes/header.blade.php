@@ -15,12 +15,16 @@
     <header>
         <h1>Welcome to Hikerz</h1>
         <nav>
-            <ul>
+            <ul class="nav-ul">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/hikes/add">Add Hike</a></li>
             </ul>
+            <div class="log">
+                <a href="#">Login</a>
+                <a href="#">Subscribe</a>
+            </div>
         </nav>
     </header>
 </body>
