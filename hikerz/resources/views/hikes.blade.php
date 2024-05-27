@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Hello</h1>
+@include('includes.header')
+<h1>Hikes : </h1>
 </body>
 </html>
