@@ -9,8 +9,8 @@
 </head>
 <body>
 @include('includes.header')
-<h1>Hikes : </h1>
-<ul>
+<h1 class="title-hikes">Hikes : </h1>
+<ul class="list-hikes">
     @foreach($hikes as $hike)
         <li><a href=" {{ url('/hikes/' . $hike-> hike_id) }}">{{ $hike->name }}</a></li>
     @endforeach

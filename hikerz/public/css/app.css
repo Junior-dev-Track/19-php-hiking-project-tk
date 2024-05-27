@@ -2,16 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url(https://cdn.pixabay.com/photo/2019/01/27/22/32/mountains-3959204_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 200vh;
+    /* position: fixed; */
 }
 
 header{
-    background-color: darkgrey;
+
+    /* background-color: rgba(193, 192, 192, 0.656); */
     color: white;
     padding: 10px;
     text-align: center;
@@ -19,9 +26,11 @@ header{
     align-items: center;
 }
 
+
 header h1{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     width: 20rem;
+    color: rgba(51, 51, 51, 0.742);
 }
 
 nav {
@@ -36,9 +45,50 @@ nav {
     list-style: none;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
 }
+
 
 .nav-ul li {
     list-style-type: none;
+    border-bottom: none;
+}
+
+.nav-ul li:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+ }
+
+.nav-ul li a {
+    color: rgb(255, 255, 255);
+}
+
+
+.log a {
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+}
+
+
+/* ------------ La liste des hikes style ------------ */
+
+.title-hikes {
+    margin: 30px 10px;
+}
+
+.list-hikes {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.list-hikes li {
+    padding: 30px;
+    margin-bottom: 10px;
+    background: rgba(56, 57, 57, 0.514);
+    width: 30%;
+}
+
+.list-hikes li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-size: 1.3rem;
 }
