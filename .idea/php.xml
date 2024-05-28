@@ -241,6 +241,7 @@
       <path value="$PROJECT_DIR$/hiking-project/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/hiking-project/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/hiking-project/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/hikerz/vendor/laravel/breeze" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

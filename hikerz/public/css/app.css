@@ -83,7 +83,7 @@ nav {
     padding: 30px;
     margin-bottom: 10px;
     background: rgba(56, 57, 57, 0.514);
-    width: 30%;
+    width: 100%;
 }
 
 .list-hikes li a {
@@ -91,4 +91,10 @@ nav {
     list-style-type: none;
     color: white;
     font-size: 1.3rem;
+}
+
+.hikes_display {
+    display: flex;
+    justify-content: space-around;
+    /*flex-wrap: wrap;*/
 }

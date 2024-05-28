@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\QueryException;
 
@@ -50,6 +51,23 @@ class UserController extends Controller
         return back()->withInput()->withErrors(['error' => 'Failed to subscribe. Please try again.']);
     }
 }
+
+public function login(Request $request)
+{
+    $credentials = $request->only('email', 'password');
+
+    if (Auth::attempt($credentials)) {
+        // Authentication passed...
+        return redirect()->intended('dashboard');
+    }
+
+    // Authentication failed...
+    return back()->withErrors([
+        'email' => 'The provided credentials do not match our records.',
+    ]);
+}
+
+
 
 }
 

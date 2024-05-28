@@ -9,11 +9,26 @@
 </head>
 <body>
 @include('includes.header')
+<div class="hikes_display">
+<div class="hikes">
 <h1 class="title-hikes">Hikes : </h1>
 <ul class="list-hikes">
     @foreach($hikes as $hike)
         <li><a href=" {{ url('/hikes/' . $hike-> hike_id) }}">{{ $hike->name }}</a></li>
     @endforeach
 </ul>
+</div>
+@if (auth()->check() && $selectedHike)
+    <div class="hike">
+        <h2>{{ $selectedHike->name }}</h2>
+
+        <p>Distance: {{ $selectedHike->distance }}</p>
+        <p>Duration: {{ $selectedHike->duration }}</p>
+        <p>Elevation Gain: {{ $selectedHike->elevation_gain }}</p>
+        <p>Description: {{ $selectedHike->description }}</p>
+    </div>
+@endif
+</div>
+
 </body>
 </html>

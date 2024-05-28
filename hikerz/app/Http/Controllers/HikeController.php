@@ -32,23 +32,27 @@ class HikeController extends Controller
         return redirect('/hikes')->with('success', 'Hike added successfully');
     }
 
-    public function showHikes()
+    public function showHikes($selectedHikeId = null)
     {
         // Fetch all hikes from the database
         $hikes = Hike::all();
 
-        // Return the hikes to the view
-        return view('hikes', ['hikes' => $hikes]);
+        //Fetch the selected hike if an ID is provided
+
+        $selectedHike = $selectedHikeId ? Hike::where('hike_id', $selectedHikeId) ->first() : null;
+
+        // Return the hikes and the selected hike (if any) to the view
+        return view('hikes', ['hikes' => $hikes, 'selectedHike' => $selectedHike]);
     }
 
-    public function showHike($hike_id)
-    {
-        // Fetch the hike with the given ID from the database
-        $hike = Hike::where('hike_id', $hike_id)->first();
-
-        // Return the hike to the view
-        return view('hike', ['hike' => $hike]);
-    }
+//    public function showHike($hike_id)
+//    {
+//        // Fetch the hike with the given ID from the database
+//        $hike = Hike::where('hike_id', $hike_id)->first();
+//
+//        // Return the hike to the view
+//        return view('hike', ['hike' => $hike]);
+//    }
 
 }
 

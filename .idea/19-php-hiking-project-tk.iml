@@ -7,8 +7,6 @@
       <sourceFolder url="file://$MODULE_DIR$/hikerz/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/hikerz/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/hikerz/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
-      <sourceFolder url="file://$MODULE_DIR$/hikerz/tests/Feature" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/hikerz/tests/Unit" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/hikerz.old/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/hikerz.old/vendor/carbonphp/carbon-doctrine-types" />
       <excludeFolder url="file://$MODULE_DIR$/hikerz.old/vendor/composer" />
@@ -233,6 +231,7 @@
       <excludeFolder url="file://$MODULE_DIR$/hiking-project/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/hiking-project/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/hiking-project/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/hikerz/vendor/laravel/breeze" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
