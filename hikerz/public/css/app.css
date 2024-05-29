@@ -76,7 +76,7 @@ nav {
 
 .list-hikes {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
 }
 
 .list-hikes li {
@@ -95,6 +95,6 @@ nav {
 
 .hikes_display {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     /*flex-wrap: wrap;*/
 }

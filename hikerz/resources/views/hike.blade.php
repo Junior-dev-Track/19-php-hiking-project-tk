@@ -15,6 +15,14 @@
 <p>Duration: {{ $hike->duration }}</p>
 <p>Elevation Gain: {{ $hike->elevation_gain }}</p>
 <p>Description: {{ $hike->description }}</p>
+
+@if (auth()->check())
+    <form action="{{ route('hikes.destroy', ['hike' => $hike->id]) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit">Delete Hike</button>
+    </form>
+@endif
 </body>
 </html>
 

@@ -47,4 +47,13 @@ class RegisteredUserController extends Controller
 
         return redirect(route('dashboard', absolute: false));
     }
+
+    public function register(Request $request)
+{
+    // Validate and create the user...
+
+    $user->sendEmailVerificationNotification();
+
+    return back()->with('status', 'Please check your email for a verification link.');
+}
 }

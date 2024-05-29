@@ -45,15 +45,27 @@ class HikeController extends Controller
         return view('hikes', ['hikes' => $hikes, 'selectedHike' => $selectedHike]);
     }
 
-//    public function showHike($hike_id)
-//    {
-//        // Fetch the hike with the given ID from the database
-//        $hike = Hike::where('hike_id', $hike_id)->first();
-//
-//        // Return the hike to the view
-//        return view('hike', ['hike' => $hike]);
-//    }
+    public function destroy($hike_id)
+{
+    $hike = Hike::findOrFail($hike_id);
+    $hike->delete();
 
+    return redirect('/hikes');
+}
+
+public function show($id)
+{
+    $hike = Hike::findOrFail($id);
+
+    return view('hike', ['hike' => $hike]);
+}
+
+public function addHikeForm()
+{
+    return view('addHike');
+
+
+}
 }
 
 
